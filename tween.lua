@@ -110,7 +110,7 @@ end
 -- expo
 local function inExpo(t, b, c, d)
   if t == 0 then return b end
-  return c * pow(2, 10 * (t / d - 1)) + b - c * 0.001
+  return c * (pow(2, 10 * (t / d - 1)) - 0.001) + b
 end
 local function outExpo(t, b, c, d)
   if t == d then return b + c end
